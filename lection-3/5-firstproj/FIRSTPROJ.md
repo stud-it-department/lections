@@ -1,0 +1,1 @@
+https://github.com/KaymeKaydex/web-2022/tree/main/tutorials/lab1-go
