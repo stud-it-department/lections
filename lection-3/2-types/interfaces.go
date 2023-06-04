@@ -36,12 +36,12 @@ func (c *Cat) MakeSound() string {
 
 func main() {
 	d := &Dog{}
-	c := &Cat{}
+	c := Cat{}
 
-	// 	c := Cat{} - неправильно! потому что интерфейс - указатель на что-то!
+	// interface = any
 
 	GetSound(d)
-	GetSound(c)
+	GetSound(&c) // получаем указатель этого типа
 }
 
 func GetSound(a IAnimal) {
