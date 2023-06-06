@@ -42,8 +42,20 @@ func main() {
 
 	GetSound(d)
 	GetSound(&c) // получаем указатель этого типа
+
+	Ex(d)
+	Ex(12)
 }
 
 func GetSound(a IAnimal) {
 	fmt.Println(a.MakeSound())
+}
+
+func Ex(a interface{}) {
+	if _, ok := a.(IAnimal); !ok {
+		fmt.Println("not ok!")
+		return
+	}
+
+	fmt.Println("ok!")
 }
